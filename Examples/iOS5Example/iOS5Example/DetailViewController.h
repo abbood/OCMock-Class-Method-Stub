@@ -11,4 +11,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
+
++ (NSString *)helloWorld;
+
 @end

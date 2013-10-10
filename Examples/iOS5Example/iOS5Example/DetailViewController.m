@@ -41,6 +41,10 @@
     }
 }
 
++ (NSString *)helloWorld {
+    return @"hello world";
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

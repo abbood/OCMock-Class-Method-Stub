@@ -6,6 +6,7 @@
 #import <OCMock/OCMock.h>
 #import "MasterViewController.h"
 #import "iOS5ExampleTests.h"
+#import "DetailViewController.h"
 
 @implementation iOS5ExampleTests
 
@@ -31,6 +32,10 @@
     NSIndexPath *dummyIndexPath = [NSIndexPath indexPathWithIndex:3];
     id tableViewMock = [OCMockObject mockForClass:[UITableView class]];
     [[tableViewMock expect] deleteRowsAtIndexPaths:[NSArray arrayWithObject:dummyIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+    
+    id detailViewMock = [OCMockObject mockForClass:[DetailViewController class]];
+    [[[detailViewMock stub] andReturn:@"hello"] helloWorld];
+    
     
     // Invoke functionality to be tested
     // If you want to see the test fail you can, for example, change the editing style to UITableViewCellEditingStyleNone. In
